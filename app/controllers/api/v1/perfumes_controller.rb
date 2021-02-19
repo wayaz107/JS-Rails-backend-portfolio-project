@@ -6,6 +6,8 @@ class Api::V1::PerfumesController < ApplicationController
     end 
 
     def show
+        @perfume = Perfume.find(params[:id])
+        render json: @perfume
     end
 
     def create 
