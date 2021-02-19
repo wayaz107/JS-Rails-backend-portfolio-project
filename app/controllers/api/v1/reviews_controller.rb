@@ -29,7 +29,7 @@ class Api::V1::ReviewsController < ApplicationController
  private
 
   def review_params
-  params.require(:review).permit(:content, :reviewer, :book_id)
+    params.require(:review).permit(:perfume_id, :body)
   end
 
 end
