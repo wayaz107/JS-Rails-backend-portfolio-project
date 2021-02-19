@@ -11,8 +11,15 @@ class Api::V1::ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.create(review_params)
-    render json: @review
+    perfume = Perfume.find(params[:perfume_id])
+    @review = perfume.reviews.build(review_params)
+    
+    if @review.save
+      render json: @review, status: :created
+    else
+      render json: @review.errors, status: :unprocessable_entity
+    end
+
   end 
 
  private
