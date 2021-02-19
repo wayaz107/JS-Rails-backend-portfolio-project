@@ -1,4 +1,4 @@
-class Api::V1::BooksController < ApplicationController
+class Api::V1::PerfumesController < ApplicationController
 
     def index
         @books = Book.all
