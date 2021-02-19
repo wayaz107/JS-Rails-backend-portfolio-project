@@ -11,6 +11,7 @@ class Api::V1::PerfumesController < ApplicationController
     end
 
     def create 
+        @perfume = Perfume.new(perfume_params)
     end 
 
     private
