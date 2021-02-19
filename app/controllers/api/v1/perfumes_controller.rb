@@ -23,6 +23,7 @@ class Api::V1::PerfumesController < ApplicationController
     private
 
     def perfume_params
+        params.require(:perfume).permit(:name, :brand, :image, review: [:body])
     end 
 
 end
