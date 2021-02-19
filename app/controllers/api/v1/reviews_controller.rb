@@ -19,8 +19,12 @@ class Api::V1::ReviewsController < ApplicationController
     else
       render json: @review.errors, status: :unprocessable_entity
     end
-
   end 
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+  end
 
  private
 
