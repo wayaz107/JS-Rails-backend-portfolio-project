@@ -1,4 +1,4 @@
-class City < ApplicationRecord
+class Season < ApplicationRecord
     has_many :lists
     validates :name, presence: true
 end

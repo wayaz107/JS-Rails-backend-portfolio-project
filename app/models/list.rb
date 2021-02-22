@@ -1,3 +1,3 @@
 class List < ApplicationRecord
-    belongs_to :city
+    belongs_to :season
 end

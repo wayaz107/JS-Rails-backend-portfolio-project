@@ -1,4 +1,4 @@
 class ListSerializer 
   include FastJsonapi::ObjectSerializer
-  attributes :name, :description, :city
+  attributes :name, :description, :season
 end 

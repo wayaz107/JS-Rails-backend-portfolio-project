@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
  
-      resources :cities do
+      resources :seasons do
         resources :lists
     end
 

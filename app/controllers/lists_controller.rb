@@ -21,7 +21,7 @@ end
 private
 
 def list_params
-    params.require(:list).permit(:name, :description, :city_id)
+    params.require(:list).permit(:name, :description, :season_id)
 end
 
 end
