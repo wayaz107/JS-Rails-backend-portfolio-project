@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_02_16_025048) do
   create_table "lists", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "city_id"
+    t.integer "season_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
