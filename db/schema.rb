@@ -15,21 +15,18 @@ ActiveRecord::Schema.define(version: 2021_02_16_025048) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "perfumes", force: :cascade do |t|
+  create_table "cities", force: :cascade do |t|
     t.string "name"
-    t.string "brand"
-    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.text "body"
-    t.bigint "perfume_id"
+  create_table "lists", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "city_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["perfume_id"], name: "index_reviews_on_perfume_id"
   end
 
-  add_foreign_key "reviews", "perfumes"
 end

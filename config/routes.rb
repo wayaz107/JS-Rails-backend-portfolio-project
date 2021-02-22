@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  namespace :api do
-    namespace :v1 do
-      resources :perfumes
-      resources :reviews
+ 
+      resources :cities do
+        resources :lists
     end
-  end
+
+  resources :lists
 end
