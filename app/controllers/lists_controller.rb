@@ -11,7 +11,7 @@ def show
 end
 
 def create
-    list = List.new(item_params)
+    list = List.new(list_params)
     if list.save
         render json: ListSerializer.new(list).serialized_json
     end
