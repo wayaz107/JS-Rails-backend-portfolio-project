@@ -1,24 +1,21 @@
-# README
+<h1>Things to Do in Chicago - Backend</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Overview
 
-Things you may want to cover:
+This web application was created with a JavaScript front-end and Rails backend. Users can view and add a list of things to do in Chicago during different seasons. Link to frontend[https://github.com/wayaz107/Javascript-frontend-project]
 
-* Ruby version
+Installation
 
-* System dependencies
+To install follow these steps:
 
-* Configuration
+-download or clone this project
 
-* Database creation
+-cd into main directory
 
-* Database initialization
+-run bundle install in your terminal
 
-* How to run the test suite
+-run rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+License
 
-* Deployment instructions
-
-* ...
+This project is licensed under the MIT License - see the LICENSE file for details.
