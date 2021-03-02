@@ -1,27 +1,34 @@
 class ListsController < ApplicationController
-  
-def index
+
+  def index
+  # binding.pry
     lists = List.all
     render json: ListSerializer.new(lists)
-end
+  end
 
-def show
+  def show
     list = List.find_by(id: params[:id])
     render json: ListSerializer.new(list).serialized_json
-end
+  end
 
-def create
+  def create
     list = List.new(list_params)
     if list.save
         render json: ListSerializer.new(list).serialized_json
     end
-end
+  end
+
+   def destroy
+    list = List.find_by(id: params[:id])
+    if list.destroy
+      render json: { message: "Successfully deleted"}
+   end 
 
 
-private
+ private
 
-def list_params
+  def list_params
     params.require(:list).permit(:name, :description, :season_id)
-end
+  end
 
 end
